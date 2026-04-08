@@ -7,13 +7,14 @@ import { useLang } from "@/components/lang-context"
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern"
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 
-function AnimatedCounter({ value }: { value: string }) {
+function AnimatedCounter({ value, locale }: { value: string; locale: string }) {
   const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
     const original = value
+    const loc = locale === "en" ? "en-US" : "pt-BR"
 
     if (original.startsWith("+") && !original.includes("%") && !original.includes("/")) {
       const target = parseInt(original.replace(/[^0-9]/g, ""))
@@ -23,7 +24,7 @@ function AnimatedCounter({ value }: { value: string }) {
       const tick = (now: number) => {
         const progress = Math.min((now - startTime) / duration, 1)
         start = Math.floor(target * progress)
-        el.textContent = `+${start.toLocaleString("pt-BR")}`
+        el.textContent = `+${start.toLocaleString(loc)}`
         if (progress < 1) requestAnimationFrame(tick)
         else el.textContent = original
       }
@@ -59,7 +60,7 @@ function AnimatedCounter({ value }: { value: string }) {
       }
       requestAnimationFrame(tick)
     }
-  }, [value])
+  }, [value, locale])
 
   return <span ref={ref}>{value}</span>
 }
@@ -78,7 +79,7 @@ const fadeUp = {
 }
 
 export function Hero() {
-  const { t } = useLang()
+  const { lang, t } = useLang()
   const d = t.hero
 
   return (
@@ -100,10 +101,10 @@ export function Hero() {
           <motion.div
             variants={blurUp}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-[10px] bg-white/[0.06] border border-white/10 rounded-full px-5 py-2.5 mb-10"
+            className="inline-flex max-w-full flex-wrap items-center justify-center gap-x-[10px] gap-y-2 bg-white/[0.06] border border-white/10 rounded-full px-4 py-2.5 sm:px-5 mb-10 text-balance"
           >
-            <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-[pulse-dot_2s_infinite]" />
-            <AnimatedShinyText shimmerWidth={150} className="!mx-0 !max-w-none text-[13px] font-medium tracking-[0.5px]">
+            <span className="w-2 h-2 shrink-0 rounded-full bg-[#38bdf8] animate-[pulse-dot_2s_infinite]" />
+            <AnimatedShinyText shimmerWidth={150} className="!mx-0 !max-w-[min(100%,420px)] min-w-0 text-center text-[12px] font-medium tracking-[0.5px] sm:!max-w-none sm:text-[13px]">
               {d.badge}
             </AnimatedShinyText>
           </motion.div>
@@ -111,7 +112,7 @@ export function Hero() {
           <motion.h1
             variants={blurUp}
             transition={{ duration: 1.1 }}
-            className="text-[clamp(3rem,6vw,5rem)] font-black leading-[1.05] tracking-[-1.5px] mb-8"
+            className="text-[clamp(2.25rem,6vw,5rem)] font-black leading-[1.1] tracking-[-1.5px] mb-8 text-balance"
           >
             {d.titlePre}{" "}
             <span className="bg-gradient-to-r from-[#0169fc] to-[#38bdf8] bg-clip-text text-transparent">
@@ -123,7 +124,7 @@ export function Hero() {
           <motion.p
             variants={blurUp}
             transition={{ duration: 0.9 }}
-            className="text-[clamp(1.05rem,1.8vw,1.2rem)] text-white/50 max-w-[560px] mx-auto mb-12 leading-[1.7]"
+            className="text-[clamp(1.05rem,1.8vw,1.2rem)] text-white/50 max-w-[560px] mx-auto mb-12 leading-[1.7] text-pretty px-1"
           >
             {d.subtitle}
           </motion.p>
@@ -146,7 +147,7 @@ export function Hero() {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.6 }}
-            className="relative flex items-center justify-center flex-wrap gap-10 pt-10"
+            className="relative flex items-center justify-center flex-wrap gap-6 px-1 pt-10 sm:gap-10"
           >
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-white/[0.15] overflow-hidden">
               <motion.div
@@ -161,7 +162,7 @@ export function Hero() {
                 {i > 0 && <span className="hidden sm:block w-px h-10 bg-white/[0.08]" />}
                 <span className="flex flex-col gap-1.5">
                   <span className="text-[2.2rem] font-black tracking-[-1px] text-white">
-                    <AnimatedCounter value={s.value} />
+                    <AnimatedCounter value={s.value} locale={lang} />
                   </span>
                   <span className="text-[13px] text-white/40 font-medium">{s.label}</span>
                 </span>

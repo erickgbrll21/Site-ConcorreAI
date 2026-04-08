@@ -387,7 +387,7 @@ export const dictionaries = {
       navLinks: ["Soluções para Empresas", "Soluções para Órgãos", "Como Funciona", "Plataforma completa", "Sobre", "Contato"],
       serviceLinks: ["Assessoria Jurídica", "Benchmark Automático", "Mapa de Risco", "Score de Risco", "Detecção de Anomalias", "Inteligência Orçamentária"],
       legalLinks: ["Política de Privacidade", "Termos de Uso", "LGPD"],
-      copyright: "© 2025 ConcorreAI. Todos os direitos reservados.",
+      copyright: "© 2026 ConcorreAI. Todos os direitos reservados.",
       oab: "Inscrito na OAB · LGPD Compliant",
     },
   },
@@ -402,7 +402,7 @@ export const dictionaries = {
       demo: "Request a demo",
     },
     hero: {
-      badge: "Legal Advisory for Procurement Processes",
+      badge: "Legal Advisory in Public Procurement",
       titlePre: "Automate your company's participation in",
       titleHighlight: "public tenders",
       titlePost: "with artificial intelligence",
@@ -470,10 +470,10 @@ export const dictionaries = {
     },
     orgaos: {
       tag: "Public sector solutions",
-      title: "Institutional procurement management",
-      titleHighlight: "on the same tech stack",
-      titlePost: "",
-      lead: "For municipalities, agencies and public entities: we organize processes, bring transparency to indicators and support compliance with Law 14.133/2021 — with dashboards, risk tools and administrative automation.",
+      title: "Institutional",
+      titleHighlight: "procurement management",
+      titlePost: "on the same technology stack",
+      lead: "For municipalities, agencies and public entities: we organize processes, enhance transparency of indicators and strengthen regulatory compliance — with dashboards, risk management and administrative automation.",
       cards: [
         {
           icon: "FolderOpen",
@@ -567,7 +567,13 @@ export const dictionaries = {
       lead: "Beyond the core for companies (capture, AI, robots and dashboard), you can enable advanced governance, risk and performance features — for teams that need maximum control.",
       saibaMais: "Learn more",
       cards: [
-        { icon: "Scale", num: "01", title: "Legal Advisory in Procurement", desc: "Complete legal support throughout all procurement phases, from bid documents to contract stage, grounded in Law 14.133/2021.", benefit: "Legal certainty in every stage" },
+        {
+          icon: "Scale",
+          num: "01",
+          title: "Legal Advisory in Procurement",
+          desc: "Complete legal support across all stages of the procurement process, from bid and solicitation documents through contract administration, grounded in best practices and current legislation.",
+          benefit: "Legal certainty at every stage",
+        },
         { icon: "BarChart3", num: "02", title: "Automated Internal Benchmarking", desc: "Automated analysis of prices in similar contracts with public portal cross-checking, ensuring fair market-based procurement.", benefit: "Measurable savings in procurement" },
         { icon: "Map", num: "03", title: "Procurement Risk Mapping", desc: "Systematic identification and mapping of legal, operational and compliance risks with automated mitigation plans.", benefit: "Prevention before risk materializes" },
         { icon: "Gauge", num: "04", title: "Performance Mapping", desc: "Dynamic dashboards with performance indicators for processes, deadlines, suppliers and teams in real time.", benefit: "Management driven by real data" },
@@ -578,7 +584,25 @@ export const dictionaries = {
       ],
     },
     servicosModal: [
-      { badge: "Service 01 / 08", icon: "Scale", title: "Legal Advisory & Consulting for Procurement", lead: "We provide specialized legal support throughout all stages of public procurement, with preventive and strategic action.", sections: [{ type: "label", text: "Scope" }, { type: "list", items: ["Review and validation of bidding documents and terms of reference;", "Responses to challenges and administrative appeals;", "Support in sensitive or high-complexity procedures;", "Legal risk mitigation and regulatory compliance."] }, { type: "result", text: "Greater legal certainty, lower liabilities and stronger administrative decisions." }] },
+      {
+        badge: "Service 01 / 08",
+        icon: "Scale",
+        title: "Legal Advisory & Consulting for Procurement",
+        lead: "We provide specialized legal support throughout every phase of public procurement, with preventive and strategic action grounded in current law and best practices.",
+        sections: [
+          { type: "label", text: "We work on" },
+          {
+            type: "list",
+            items: [
+              "Review and validation of bidding documents and terms of reference;",
+              "Responses to bid protests (impugnações) and administrative appeals;",
+              "Support for sensitive or highly complex procedures;",
+              "Legal risk mitigation and regulatory compliance.",
+            ],
+          },
+          { type: "result", text: "Greater legal certainty, lower liabilities and stronger administrative decisions." },
+        ],
+      },
       { badge: "Service 02 / 08", icon: "BarChart3", title: "Automated Internal Benchmarking", lead: "Whenever a new Terms of Reference is drafted, the system automatically compares it with the institution's historical data.", sections: [{ type: "label", text: "Outputs" }, { type: "list", items: ["Recent similar bids;", "Average contracted values;", "Recurring winners;", "Average completion time."] }, { type: "conclusion", text: "This improves budget consistency, technical standardization and evidence-based decisions." }] },
       { badge: "Service 03 / 08", icon: "Map", title: "Procurement Risk Mapping", lead: "We use historical intelligence to anticipate issues before publication.", sections: [{ type: "text", text: "The system identifies high-risk objects, delay-prone areas, large estimate-to-award variation and suppliers with high appeal rates." }, { type: "alert", text: '"This object type historically generates 32% more appeals."' }, { type: "conclusion", text: "This reduces litigation, rework and failure risks, improving predictability and legal safety." }] },
       { badge: "Service 04 / 08", icon: "Gauge", title: "Procurement Performance Map", lead: "We transform procurement data into strategic indicators for better decision-making.", sections: [{ type: "text", text: "We analyze average time by modality and area, failed bids rate, appeals rate, and estimated vs awarded value differences." }, { type: "conclusion", text: "Managers clearly identify bottlenecks, waste and recurring risks, enabling preventive improvements." }] },
@@ -641,7 +665,7 @@ export const dictionaries = {
       navLinks: ["Solutions for Companies", "Public Sector Solutions", "How It Works", "Full platform", "About", "Contact"],
       serviceLinks: ["Legal Advisory", "Automated Benchmarking", "Risk Mapping", "Risk Score", "Anomaly Detection", "Budget Intelligence"],
       legalLinks: ["Privacy Policy", "Terms of Use", "LGPD"],
-      copyright: "© 2025 ConcorreAI. All rights reserved.",
+      copyright: "© 2026 ConcorreAI. All rights reserved.",
       oab: "Registered at OAB · LGPD Compliant",
     },
   },

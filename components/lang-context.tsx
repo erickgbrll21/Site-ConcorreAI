@@ -32,7 +32,11 @@ export function LangProvider({ children }: { children: ReactNode }) {
 
   const t = dictionaries[lang]
 
-  return <LangContext value={{ lang, t, setLang, toggleLang }}>{children}</LangContext>
+  return (
+    <LangContext.Provider value={{ lang, t, setLang, toggleLang }}>
+      {children}
+    </LangContext.Provider>
+  )
 }
 
 export function useLang() {

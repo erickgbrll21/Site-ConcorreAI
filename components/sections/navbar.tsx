@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 import Image from "next/image"
 import { Globe, Menu, X } from "lucide-react"
 import { useLang } from "@/components/lang-context"
@@ -26,48 +26,51 @@ export function Navbar() {
     setMobileOpen(false)
   }, [])
 
-  const links: { label: string; id: string }[] = [
-    { label: t.nav.sobre, id: "sobre" },
-    { label: t.nav.empresas, id: "solucoes-empresas" },
-    { label: t.nav.orgaos, id: "solucoes-orgaos" },
-    { label: t.nav.como, id: "como-funciona" },
-    { label: t.nav.contato, id: "contato" },
-  ]
+  const links = useMemo(
+    () => [
+      { label: t.nav.sobre, id: "sobre" },
+      { label: t.nav.empresas, id: "solucoes-empresas" },
+      { label: t.nav.orgaos, id: "solucoes-orgaos" },
+      { label: t.nav.como, id: "como-funciona" },
+      { label: t.nav.contato, id: "contato" },
+    ],
+    [t],
+  )
 
   return (
     <>
       <nav
-        className={`fixed left-1/2 -translate-x-1/2 z-[1000] w-[calc(100%-2rem)] max-w-[1200px] transition-all duration-400 rounded-full px-6 ${
+        className={`fixed left-1/2 -translate-x-1/2 z-[1000] w-[min(1200px,calc(100%-1rem))] max-w-[1200px] transition-all duration-400 rounded-full px-3 sm:px-6 ${
           scrolled
             ? "top-4 bg-white/95 backdrop-blur-[20px] border border-[#e5e7eb] shadow-[0_8px_32px_rgba(0,0,0,0.08)] py-3"
             : "top-6 bg-white border border-[#e5e7eb] shadow-[0_4px_24px_rgba(0,0,0,0.04)] py-4"
         }`}
       >
-        <div className="flex items-center justify-between">
-          <button onClick={() => scrollTo("hero")} className="flex items-center gap-3 shrink-0">
+        <div className="flex min-w-0 items-center justify-between gap-2">
+          <button onClick={() => scrollTo("hero")} className="flex shrink-0 items-center gap-2 sm:gap-3">
             <Image
               src="/logo-concorreai.png"
               alt="ConcorreAI"
               width={168}
               height={42}
-              className="h-[38px] w-auto"
+              className="h-[32px] w-auto sm:h-[36px] xl:h-[38px]"
               priority
             />
           </button>
 
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 xl:flex xl:px-2">
             {links.map((l) => (
               <button
                 key={l.id}
                 onClick={() => scrollTo(l.id)}
-                className="text-[0.85rem] font-medium text-[#64748b] px-3 py-2 rounded-lg transition-all hover:text-[#0f172a] hover:bg-[#f8fafc] whitespace-nowrap"
+                className="rounded-lg px-1.5 py-2 text-center text-[0.72rem] font-medium leading-tight text-[#64748b] transition-all hover:bg-[#f8fafc] hover:text-[#0f172a] 2xl:px-2.5 2xl:text-[0.85rem]"
               >
                 {l.label}
               </button>
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden shrink-0 items-center gap-2 xl:flex xl:gap-3">
             <div className="relative">
               <button
                 onClick={() => setLangOpen(!langOpen)}
@@ -92,7 +95,7 @@ export function Navbar() {
             </div>
             <button
               onClick={() => scrollTo("contato")}
-              className="px-5 py-2.5 text-[13px] font-medium whitespace-nowrap bg-[#0169fc] text-white border border-[#0169fc] rounded-full transition-all duration-300 hover:bg-[#0155d0] hover:border-[#0155d0] shadow-[0_2px_8px_rgba(1,105,252,0.2)]"
+              className="px-3 py-2 text-[11px] font-medium leading-tight sm:px-4 sm:py-2.5 sm:text-[12px] xl:px-5 xl:text-[13px] bg-[#0169fc] text-white border border-[#0169fc] rounded-full transition-all duration-300 hover:bg-[#0155d0] hover:border-[#0155d0] shadow-[0_2px_8px_rgba(1,105,252,0.2)]"
             >
               {t.nav.demo}
             </button>
@@ -100,7 +103,7 @@ export function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-[#0f172a]"
+            className="p-2 text-[#0f172a] xl:hidden"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -109,7 +112,7 @@ export function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="fixed top-[80px] left-0 right-0 bg-white/98 backdrop-blur-[20px] border-b border-[#e5e7eb] p-5 pb-8 z-[999] flex flex-col gap-2 shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
+        <div className="fixed top-[88px] left-0 right-0 z-[999] flex max-h-[calc(100vh-5.5rem)] flex-col gap-2 overflow-y-auto border-b border-[#e5e7eb] bg-white/98 p-5 pb-8 shadow-[0_8px_24px_rgba(0,0,0,0.06)] backdrop-blur-[20px] sm:top-[96px]">
           {links.map((l) => (
             <button
               key={l.id}
