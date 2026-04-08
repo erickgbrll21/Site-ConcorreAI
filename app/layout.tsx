@@ -12,7 +12,7 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" }
 const siteDescription = "Mais eficiência em licitações com Direito e Tecnologia"
 
 export const metadata: Metadata = {
-  title: "ConcorreAI | IA para licitações — Automatize a participação da sua empresa",
+  title: `ConcorreAI | ${siteDescription}`,
   description: siteDescription,
   keywords:
     "licitações empresa, automação licitação, IA licitações, captura editais, software licitações, ConcorreAI, direito, tecnologia",
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     apple: [{ url: "/icon.png", type: "image/png" }],
   },
   openGraph: {
-    title: "ConcorreAI | Automatize licitações com IA",
+    title: `ConcorreAI | ${siteDescription}`,
     description: siteDescription,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ConcorreAI",
+    title: `ConcorreAI | ${siteDescription}`,
     description: siteDescription,
   },
 }

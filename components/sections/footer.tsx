@@ -20,11 +20,8 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto px-6">
         <MotionWrapper staggerChildren={0.12} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1.2fr] gap-10 mb-12">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2">
-              <Image src="/icon.png" alt="" width={36} height={36} className="h-9 w-9 shrink-0 object-contain" />
-              <span className="text-[1.05rem] font-extrabold tracking-tight text-white">
-                Concorre<span className="text-[#38bdf8]">AI</span>
-              </span>
+            <div className="flex items-center gap-[10px]">
+              <Image src="/logo-concorreai.png" alt="ConcorreAI" width={136} height={34} className="h-[34px] w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-[#64748b] leading-[1.65] max-w-[300px]">{d.brandDesc}</p>
             <div className="flex flex-col gap-2 mt-1">
