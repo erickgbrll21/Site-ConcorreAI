@@ -47,15 +47,22 @@ export function Navbar() {
         }`}
       >
         <div className="flex min-w-0 items-center justify-between gap-2">
-          <button onClick={() => scrollTo("hero")} className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <button
+            onClick={() => scrollTo("hero")}
+            className="flex shrink-0 items-center gap-2 sm:gap-2.5"
+            aria-label="ConcorreAI — início"
+          >
             <Image
-              src="/logo-concorreai.png"
-              alt="ConcorreAI"
-              width={168}
-              height={42}
-              className="h-[32px] w-auto sm:h-[36px] xl:h-[38px]"
+              src="/icon.png"
+              alt=""
+              width={40}
+              height={40}
+              className="h-8 w-8 sm:h-9 sm:w-9 shrink-0 object-contain"
               priority
             />
+            <span className="text-left text-[0.95rem] font-extrabold tracking-tight text-[#0f172a] sm:text-[1.02rem]">
+              Concorre<span className="text-[#0169fc]">AI</span>
+            </span>
           </button>
 
           <div className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 xl:flex xl:px-2">

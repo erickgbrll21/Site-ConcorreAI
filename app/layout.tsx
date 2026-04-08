@@ -9,17 +9,26 @@ import { cn } from "@/lib/utils"
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
+const siteDescription = "Mais eficiência em licitações com Direito e Tecnologia"
+
 export const metadata: Metadata = {
   title: "ConcorreAI | IA para licitações — Automatize a participação da sua empresa",
-  description:
-    "Plataforma com IA que captura editais, analisa oportunidades, automatiza trâmites com órgãos públicos e gera documentos. Apoio jurídico para empresas concorrerem em licitações.",
+  description: siteDescription,
   keywords:
-    "licitações empresa, automação licitação, IA licitações, captura editais, software licitações, ConcorreAI",
+    "licitações empresa, automação licitação, IA licitações, captura editais, software licitações, ConcorreAI, direito, tecnologia",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon.png", type: "image/png" }],
+  },
   openGraph: {
     title: "ConcorreAI | Automatize licitações com IA",
-    description:
-      "Captação de editais, análise preditiva, automação e painel em tempo real — com assessoria jurídica especializada.",
+    description: siteDescription,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ConcorreAI",
+    description: siteDescription,
   },
 }
 
