@@ -29,7 +29,7 @@ export function Footer() {
                 <Award className="w-[11px] h-[11px] text-[#38bdf8] shrink-0" /> OAB/XX 000.000 — Registro Ativo
               </div>
               <div className="flex items-center gap-2 text-xs text-[#64748b] font-medium">
-                <CreditCard className="w-[11px] h-[11px] text-[#38bdf8] shrink-0" /> CNPJ 00.000.000/0001-00
+                <CreditCard className="w-[11px] h-[11px] text-[#38bdf8] shrink-0" /> CNPJ 65.743.424/0001-91
               </div>
             </div>
             <div className="flex gap-[10px]">
