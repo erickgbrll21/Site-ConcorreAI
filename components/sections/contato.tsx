@@ -42,10 +42,10 @@ export function Contato() {
         <div className="grid lg:grid-cols-[1fr_1.3fr] gap-16 items-start">
           <div className="flex flex-col gap-7">
             {[
-              { icon: <Phone className="w-5 h-5" />, label: d.labels ? undefined : undefined, title: "Telefone", value: "(00) 0000-0000", href: "tel:+5500000000000" },
-              { icon: <FaWhatsapp className="w-5 h-5" />, title: "WhatsApp", value: "(00) 00000-0000", href: "https://wa.me/5500000000000" },
-              { icon: <Mail className="w-5 h-5" />, title: "E-mail", value: "contato@concorreai.com.br", href: "mailto:contato@concorreai.com.br" },
-              { icon: <MapPin className="w-5 h-5" />, title: "Endereço", value: "Av. Principal, 1000 — Sala 500\nBrasília — DF, 70000-000" },
+              { icon: <Phone className="w-5 h-5" />, label: d.labels ? undefined : undefined, title: "Telefone", value: "(19) 99804-5442", href: "tel:+5519998045442" },
+              { icon: <FaWhatsapp className="w-5 h-5" />, title: "WhatsApp", value: "(19) 99804-5442", href: "https://wa.me/5519998045442" },
+              { icon: <Mail className="w-5 h-5" />, title: "E-mail", value: "contato@concorreai.ia.br", href: "mailto:contato@concorreai.ia.br" },
+              { icon: <MapPin className="w-5 h-5" />, title: "Endereço", value: "Alameda Oscar Niemeyer, 400 — BOX 9 SALA 311 — VALE DO SERENO\nNova Lima, Minas Gerais — CEP 34.006-049" },
             ].map((item, i) => (
               <MotionWrapper key={i} preset="fade-left" delay={i * 0.1}>
                 <div className="flex gap-4 items-start">

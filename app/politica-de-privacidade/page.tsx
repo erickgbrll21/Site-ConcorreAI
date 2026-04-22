@@ -76,8 +76,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-xl font-bold text-[#071f43] mb-4">5. {lang === "en" ? "Contact Us" : "Fale Conosco"}</h2>
             <p>
               {lang === "en"
-                ? "If you have any questions about this Privacy Policy, you can contact us at: contato@concorreai.com.br"
-                : "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco em: contato@concorreai.com.br"}
+                ? "If you have any questions about this Privacy Policy, you can contact us at: contato@concorreai.ia.br"
+                : "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco em: contato@concorreai.ia.br"}
             </p>
           </section>
         </div>

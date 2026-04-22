@@ -371,7 +371,7 @@ export const dictionaries = {
       formTitle: "Solicitar demonstração ou contato",
       formSubtitle: "Preencha os dados e retornamos em até 2 horas úteis com próximos passos.",
       labels: ["Nome completo *", "Cargo / Função", "E-mail *", "Telefone / WhatsApp *", "Órgão / Empresa *", "Mensagem"],
-      placeholders: ["Seu nome", "Ex: Secretário Jurídico", "seu@orgao.gov.br", "(00) 00000-0000", "Nome do órgão público ou da empresa", "Descreva brevemente o desafio ou dúvida do seu órgão ou empresa..."],
+      placeholders: ["Seu nome", "Ex: Secretário Jurídico", "contato@concorreai.ia.br", "(19) 99804-5442", "Nome do órgão público ou da empresa", "Descreva brevemente o desafio ou dúvida do seu órgão ou empresa..."],
       submit: "Enviar mensagem",
       sent: "Mensagem enviada!",
       hours: {
@@ -388,7 +388,6 @@ export const dictionaries = {
       serviceLinks: ["Assessoria Jurídica", "Benchmark Automático", "Mapa de Risco", "Score de Risco", "Detecção de Anomalias", "Inteligência Orçamentária"],
       legalLinks: ["Política de Privacidade", "Termos de Uso", "LGPD"],
       copyright: "© 2026 ConcorreAI. Todos os direitos reservados.",
-      oab: "Inscrito na OAB · LGPD Compliant",
     },
   },
   en: {
@@ -649,7 +648,7 @@ export const dictionaries = {
       formTitle: "Request a demo or contact",
       formSubtitle: "Fill in your details and we will reply within 2 business hours with next steps.",
       labels: ["Full name *", "Role / Position", "E-mail *", "Phone / WhatsApp *", "Agency / Company *", "Message"],
-      placeholders: ["Your name", "Ex: Legal Secretary", "you@example.com", "(00) 00000-0000", "Public agency or company name", "Briefly describe your agency or company's challenge or question..."],
+      placeholders: ["Your name", "Ex: Legal Secretary", "contato@concorreai.ia.br", "(19) 99804-5442", "Public agency or company name", "Briefly describe your agency or company's challenge or question..."],
       submit: "Send message",
       sent: "Message sent!",
       hours: {
@@ -666,7 +665,6 @@ export const dictionaries = {
       serviceLinks: ["Legal Advisory", "Automated Benchmarking", "Risk Mapping", "Risk Score", "Anomaly Detection", "Budget Intelligence"],
       legalLinks: ["Privacy Policy", "Terms of Use", "LGPD"],
       copyright: "© 2026 ConcorreAI. All rights reserved.",
-      oab: "Registered at OAB · LGPD Compliant",
     },
   },
 }
